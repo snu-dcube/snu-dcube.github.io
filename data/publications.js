@@ -2,7 +2,7 @@
 // type: "conference" | "journal" | "preprint"
 // venue: 태그에 표시될 짧은 이름, venueFull: 전체 표기
 // award: 수상 내역 (있으면 배지로 표시)
-// partner: 함께 연구한 기관 (있으면 "with 기관" 으로 표시)
+// partner: 함께 연구한 기관 (Research 페이지에서만 "with 기관" 으로 표시)
 // direction: "systems" | "efficiency" | "aix" 이면 Research 페이지 해당 연구 방향에 표시
 window.PUBLICATIONS = [
   {"year": 2027, "title": "SCOUT: Coupling-Free Bounds for Trillion-Scale Top-k Retrieval in Sparse Tensor Factorization", "authors": "Jun-Gi Jang, Hyunsik Yoo, Ruizhong Qiu, Yinglong Xia, and Hanghang Tong", "venue": "SIGMOD 2027", "venueFull": "SIGMOD, 2027, Huntington Beach, CA, USA. (To Appear)", "type": "conference", "links": {"paper": "https://dl.acm.org/doi/10.1145/3837123"}, "direction": "systems"},

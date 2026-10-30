@@ -105,7 +105,8 @@
 
   // ---------- Publications ----------
 
-  function pubItem(p) {
+  // showPartner: 기업 협업 표시 (Research 페이지에서만 사용)
+  function pubItem(p, showPartner = false) {
     // authors: "A, B, and C" 문자열 또는 ["A", "B"] 배열
     let authors = esc(Array.isArray(p.authors) ? p.authors.join(", ") : p.authors || "");
     for (const name of SITE.highlightAuthors || []) {
@@ -122,7 +123,7 @@
         <div class="pub-meta">
           <span class="venue" title="${esc(p.venueFull || p.venue)}">${esc(p.venue)}</span>
           ${p.award ? `<span class="award">${esc(p.award)}</span>` : ""}
-          ${p.partner ? `<span class="partner">with ${esc(p.partner)}</span>` : ""}
+          ${showPartner && p.partner ? `<span class="partner">with ${esc(p.partner)}</span>` : ""}
           ${links ? `<span>${links}</span>` : ""}
         </div>
       </li>`;
@@ -140,7 +141,7 @@
   function renderDirectionPubs(el) {
     const list = sortedPubs().filter((p) => p.direction === el.dataset.direction);
     el.innerHTML = list.length
-      ? `<ul class="pub-list">${list.map(pubItem).join("")}</ul>`
+      ? `<ul class="pub-list">${list.map((p) => pubItem(p, true)).join("")}</ul>`
       : `<p class="empty">Coming soon.</p>`;
   }
 
@@ -174,7 +175,7 @@
       results.innerHTML = years
         .map(
           (y) => `<h3 class="pub-year">${y}</h3>
-            <ul class="pub-list">${list.filter((p) => p.year === y).map(pubItem).join("")}</ul>`
+            <ul class="pub-list">${list.filter((p) => p.year === y).map((p) => pubItem(p)).join("")}</ul>`
         )
         .join("");
     }
