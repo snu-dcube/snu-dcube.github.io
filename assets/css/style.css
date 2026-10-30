@@ -365,6 +365,15 @@ section.block + section.block { border-top: 1px solid var(--line); }
 }
 :root[data-theme="dark"] .award { color: #f0c457; background: #2d2610; }
 
+.partner {
+  font-size: 0.78rem;
+  font-weight: 500;
+  color: var(--muted);
+  border: 1px solid var(--line);
+  padding: 1px 8px;
+  border-radius: 4px;
+}
+
 /* ---------- People ---------- */
 
 .people-grid {

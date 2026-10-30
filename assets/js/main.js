@@ -122,6 +122,7 @@
         <div class="pub-meta">
           <span class="venue" title="${esc(p.venueFull || p.venue)}">${esc(p.venue)}</span>
           ${p.award ? `<span class="award">${esc(p.award)}</span>` : ""}
+          ${p.partner ? `<span class="partner">with ${esc(p.partner)}</span>` : ""}
           ${links ? `<span>${links}</span>` : ""}
         </div>
       </li>`;
