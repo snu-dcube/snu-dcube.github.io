@@ -366,11 +366,14 @@ section.block + section.block { border-top: 1px solid var(--line); }
 :root[data-theme="dark"] .award { color: #f0c457; background: #2d2610; }
 
 .partner {
-  font-size: 0.78rem;
+  display: inline-block;
+  margin-right: 8px;
+  vertical-align: 1px;
+  font-size: 0.75rem;
   font-weight: 500;
   color: var(--muted);
   border: 1px solid var(--line);
-  padding: 1px 8px;
+  padding: 0 7px;
   border-radius: 4px;
 }
 
