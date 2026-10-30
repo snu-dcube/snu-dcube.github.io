@@ -118,7 +118,7 @@
       .join(" · ");
     return `
       <li class="pub">
-        <div class="pub-title">${showPartner && p.partner ? `<span class="partner">with ${esc(p.partner)}</span>` : ""}${esc(p.title)}</div>
+        <div class="pub-title">${esc(p.title)}${showPartner && p.partner ? `<span class="partner">with ${esc(p.partner)}</span>` : ""}</div>
         <div class="pub-authors">${authors}</div>
         <div class="pub-meta">
           <span class="venue" title="${esc(p.venueFull || p.venue)}">${esc(p.venue)}</span>

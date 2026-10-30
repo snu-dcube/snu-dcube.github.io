@@ -365,14 +365,15 @@ section.block + section.block { border-top: 1px solid var(--line); }
 }
 :root[data-theme="dark"] .award { color: #f0c457; background: #2d2610; }
 
+/* 기업 협업 표시: 제목 끝, 강조색 테두리 (학회 태그는 배경이 채워진 모양이라 구분됨) */
 .partner {
   display: inline-block;
-  margin-right: 8px;
+  margin-left: 8px;
   vertical-align: 1px;
   font-size: 0.75rem;
-  font-weight: 500;
-  color: var(--muted);
-  border: 1px solid var(--line);
+  font-weight: 600;
+  color: var(--accent);
+  border: 1px solid var(--accent);
   padding: 0 7px;
   border-radius: 4px;
 }
