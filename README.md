@@ -21,6 +21,7 @@ Open `index.html` in a browser to preview it locally.
 - Set a paper's `direction` (`"systems"`, `"efficiency"`, or `"aix"`) to list it under that direction on the Research page.
 - Put photos in `assets/img/people/` and set the `photo` path in `data/members.js`.
 - When recruiting ends, remove the `<section class="block hiring-block">` block from `index.html`.
+- After changing CSS/JS/data files, bump the `?v=...` value on the `<link>`/`<script>` tags in every page so browsers fetch the new files instead of cached ones.
 
 ## Structure
 
